@@ -3,7 +3,7 @@ import numpy as np
 import taichi as ti
 
 ti.init(arch=ti.cpu,debug=True)  # Try to run on GPU
-
+# 在mpm128基础上只保留弹性部分，增加了重力，出现了数组越界，不知道是哪里的越界
 
 n_particles, n_grid = 9000 , 128
 dx, inv_dx = 1 / n_grid, float(n_grid)
